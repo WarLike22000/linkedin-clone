@@ -33,7 +33,7 @@ export async function signUp(
       },
     });
 
-    if (!existingUsername) {
+    if (existingUsername) {
       return {
         error: "Username already taken",
       };
@@ -48,7 +48,7 @@ export async function signUp(
       },
     });
 
-    if (!existingEmail) {
+    if (existingEmail) {
       return {
         error: "Email already taken",
       };
